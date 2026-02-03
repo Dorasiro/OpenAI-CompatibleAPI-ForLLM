@@ -6,7 +6,8 @@ import time
 
 app = FastAPI()
 
-OLLAMA_URL = "http://host.docker.internal:11434/api/chat"
+PRIVATE_IP = "192.168.2.199"
+OLLAMA_URL = "http://"+PRIVATE_IP+":11434/api/chat"
 
 class Message(BaseModel):
     role: str
